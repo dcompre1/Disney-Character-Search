@@ -4,7 +4,8 @@ import pandas as pd
 
 character_name = input("Please enter a character name: ")
 while character_name.strip().isdigit():
-	character_name = input("That is not a valid character name, please enter a new name:")
+    character_name = input("That is not a valid character name\
+	, please enter a new name:")
 
 #request to API
 req_result = disney_funcs.make_get_request("https://api.disneyapi.dev/characters")
@@ -16,7 +17,7 @@ dict_result = disney_funcs.make_dict(character_name, data, pages)
 exists = dict_result[1]
 new_data = dict_result[0]
 
-if exists == False:
+if exists is False:
 	print("The name you entered is not a Disney Character")
 else:
 	disneydf = pd.DataFrame.from_dict(new_data, orient='index', columns=['name', 'films', 'shortFilms', 'tvShows', 'videoGames'])
@@ -32,4 +33,3 @@ else:
 
 	#print information about character
 	disney_funcs.print_info(character_name, films, short_films, tv_shows, video_games)
-
