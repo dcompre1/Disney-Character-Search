@@ -9,16 +9,16 @@ def make_get_request(url):
     pages = response.json()['totalPages']
     nextUrl = response.json()['nextPage']
 
-    for i in range(148):
+    for i in range(pages - 1):
         response = requests.get(nextUrl)
         data = data + response.json()['data']
-        if i == 147:
+        if i == pages - 2:
             break
         nextUrl = str(response.json()['nextPage'])
     return [data, pages]
 
 
-def make_dict(character_name, data, pages):
+def make_dict(character_name, data):
     '''organize Disney data into a dictionary and find if character exists'''
     new_data = {}
     exists = 0

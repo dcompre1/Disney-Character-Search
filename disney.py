@@ -14,7 +14,7 @@ data = req_result[0]
 pages = req_result[1]
 
 # make dictionary of Disney data
-dict_result = disney_funcs.make_dict(character_name, data, pages)
+dict_result = disney_funcs.make_dict(character_name, data)
 exists = dict_result[1]
 new_data = dict_result[0]
 
