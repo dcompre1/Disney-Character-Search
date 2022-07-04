@@ -1,7 +1,6 @@
 import unittest
 from disney_funcs import make_get_request, make_dict, retrieve_from_database
 import sqlalchemy as db
-import pandas as pd
 
 url = "https://api.disneyapi.dev/characters"
 my_dict = [{"films": ["afilm1", "afilm2", "afilm3"],
