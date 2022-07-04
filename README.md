@@ -1,15 +1,20 @@
-Dinamary Compres 
-SEO Week 1 Project 
-git repository: https://github.com/dcompre1/SEO_Proj_1
+# README
+# SEO Week 1 Project: Disney Character Search 
 
-This is a program that takes in user input of a Disney character name and then outputs information about the character
-This is done by accessing Disney's API, creating a database for information about each Disney Character, then querying that database
+## Notes on Project:
 
-imported libraries:
-- pandas
-- requests
-- sqlalchemy 
+**Setup Instructions:**
+* **Import These Libraries:**
+* pip3 install pandas
+* pip3 install requests
+* pip3 install sqlalchemy
 
-pycodestyle style guide is used and a workflow is connected to this repository that will run pycodestyle on every git action
- 
+**How to run code:**
+* run: python3 disney.py
+
+**How code works:**
+> This program prompts the user to input the name of a Disney character. 
+> A get request is sent to Disney API to receive all character information, a database is then created. 
+> Then the database is queried to find information about the character the user entered. 
+> This information is then output for the user to see. 
 
