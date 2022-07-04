@@ -21,6 +21,9 @@ jobs:
       - name: Install pandas
         run: pip3 install pandas
 
+      - name: Install sql
+        run: pip3 install sqlalchemy
+
       - name: Test with unittest
         run: |
           python3 -m unittest disneytest.py
