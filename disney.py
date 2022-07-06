@@ -3,7 +3,7 @@ import disney_funcs
 import pandas as pd
 
 character_name = input("Please enter a character name: ")
-while character_name.strip().isdigit():
+while character_name.strip().isdigit() or character_name == "":
     character_name = input("That is not a valid character name" +
                            ", please enter a new name:")
 
@@ -11,7 +11,6 @@ while character_name.strip().isdigit():
 req_result = disney_funcs.make_get_request("https://api.disneyapi" +
                                            ".dev/characters")
 data = req_result[0]
-pages = req_result[1]
 
 # make dictionary of Disney data
 dict_result = disney_funcs.make_dict(character_name, data)
